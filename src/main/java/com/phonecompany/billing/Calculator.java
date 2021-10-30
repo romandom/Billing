@@ -1,18 +1,16 @@
 package com.phonecompany.billing;
 
 import java.math.BigDecimal;
-import java.text.ParseException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class Calculator implements TelephoneBillCalculator {
     @Override
-    public BigDecimal calculate(String phoneLog) throws ParseException {
+    public BigDecimal calculate(String phoneLog) {
 
         String[] split = phoneLog.split(",");
 
-        String number = split[0];
         String from = split[1];
         String to = split[2];
 
